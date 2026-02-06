@@ -3,7 +3,8 @@
 // All the functions here send requests to get data, save data, update data, or delete data
 
 // API service for backend integration
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || (import.meta.env.PROD ? '/api/proxy/api' : 'http://16.170.233.222:8080/api');
+const API_BASE_URL = import.meta.env.PROD ? '/api/proxy/api' : 'http://16.170.233.222:8080/api';
+console.log('API_BASE_URL:', API_BASE_URL, 'PROD:', import.meta.env.PROD);
 
 class ApiService {
   constructor() {
